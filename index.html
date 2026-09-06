@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MADORI — 間取りを、もっと自由に。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MADORI ホーム"><span class="brand-mark">M</span><span>MADORI</span></a>
+    <nav aria-label="メインナビゲーション"><a href="#features">できること</a><a href="#howto">使い方</a><a href="#faq">よくある質問</a></nav>
+    <button class="header-cta" data-scroll-editor>無料ではじめる <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ブラウザでかんたん間取り作成</p>
+        <h1>間取りを、<br><em>もっと自由に。</em></h1>
+        <p class="hero-lead">専門知識はいりません。パーツを選んで、好きな場所に置くだけ。理想の暮らしを、今すぐカタチに。</p>
+        <div class="hero-actions"><button class="primary-btn" data-scroll-editor>間取りをつくる <span>→</span></button><span>登録不要・完全無料</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="mini-card">
+          <div class="mini-toolbar"><i></i><i></i><i></i><b></b></div>
+          <div class="mini-plan">
+            <div class="room living"><span>LIVING / DINING</span><small>16.2 J</small></div>
+            <div class="room bed"><span>BED ROOM</span><small>6.0 J</small></div>
+            <div class="room kitchen"><span>KITCHEN</span><small>3.2 J</small></div>
+            <div class="room bath"><span>BATH</span></div><div class="room storage"><span>WIC</span></div>
+          </div>
+          <div class="cursor">↖<span>リビング</span></div>
+        </div>
+        <div class="float-pill pill-top"><b>＋</b> ドラッグで追加</div>
+        <div class="float-pill pill-bottom"><span>↧</span><b>PNG</b> で保存</div>
+      </div>
+    </section>
+
+    <section class="editor-section" id="editor">
+      <div class="section-heading"><p class="eyebrow"><span></span> FLOOR PLAN EDITOR</p><h2>さっそく、つくってみよう。</h2><p>部屋を選んで、キャンバスをクリック。ドラッグして移動できます。</p></div>
+      <div class="editor-shell">
+        <aside class="palette">
+          <div class="palette-title"><b>パーツ</b><button id="clearBtn">すべて削除</button></div>
+          <p>部屋</p>
+          <div class="part-grid">
+            <button class="part" data-type="living"><i>▱</i><span>リビング</span></button>
+            <button class="part" data-type="bedroom"><i>▭</i><span>寝室</span></button>
+            <button class="part" data-type="kitchen"><i>⌗</i><span>キッチン</span></button>
+            <button class="part" data-type="bath"><i>▣</i><span>浴室</span></button>
+            <button class="part" data-type="toilet"><i>◉</i><span>トイレ</span></button>
+            <button class="part" data-type="storage"><i>╫</i><span>収納</span></button>
+          </div>
+          <p>設備</p>
+          <div class="part-grid compact"><button class="part" data-type="door"><i>◔</i><span>ドア</span></button><button class="part" data-type="window"><i>═</i><span>窓</span></button></div>
+          <div class="tip"><b>ヒント</b><p>追加した部屋はドラッグで移動、右下のハンドルでサイズ変更できます。</p></div>
+        </aside>
+        <div class="workspace">
+          <div class="workspace-bar"><div><button id="undoBtn" title="元に戻す">↶</button><button id="redoBtn" title="やり直す">↷</button><span></span><button id="rotateBtn" title="選択したパーツを90度回転" disabled>↻</button><span></span><button id="zoomOut">−</button><b id="zoomLabel">100%</b><button id="zoomIn">＋</button><small class="selection-status" id="selectionStatus">未選択</small></div><button class="download-btn" id="downloadBtn">↓&nbsp; 画像をダウンロード</button></div>
+          <div class="canvas-wrap"><canvas id="floorCanvas" width="1000" height="620" aria-label="間取り編集キャンバス"></canvas><div class="empty-hint" id="emptyHint"><b>＋</b><span>左のパーツを選んで<br>ここをクリック</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-heading"><p class="eyebrow"><span></span> SIMPLE &amp; USEFUL</p><h2>思い描いた間取りを、<br>ストレスなく。</h2></div>
+      <div class="feature-grid">
+        <article><span class="feature-no">01</span><div class="feature-icon">✣</div><h3>直感的な操作</h3><p>パーツを選んで置くだけ。はじめてでも迷わず、サクサク作れます。</p></article>
+        <article><span class="feature-no">02</span><div class="feature-icon">◫</div><h3>ブラウザで完結</h3><p>アプリのインストールは不要。PCでもタブレットでも、すぐに使えます。</p></article>
+        <article><span class="feature-no">03</span><div class="feature-icon">⇩</div><h3>画像ですぐ保存</h3><p>完成した間取りは高画質PNGに。家族や施工会社との共有もかんたん。</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">M</span><span>MADORI</span></a><p>理想の暮らしを、もっと身近に。</p><small>© 2026 MADORI. Made for better living.</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
