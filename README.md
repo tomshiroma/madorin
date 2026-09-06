@@ -9,7 +9,7 @@
 1. リポジトリをGitHubへpushします。
 2. GitHubのリポジトリ画面で **Settings → Pages** を開きます。
 3. **Build and deployment** の **Source** に **GitHub Actions** を選択します。
-4. `main` または `work` ブランチへpushするか、**Actions → Deploy to GitHub Pages → Run workflow** を実行します。
+4. `main` ブランチへpushするか、**Actions → Deploy to GitHub Pages → Run workflow** を実行します。
 5. デプロイ完了後、Actionsの実行結果または **Settings → Pages** に表示されるURLへアクセスします。
 
 通常、プロジェクトサイトのURLは次の形式です。
